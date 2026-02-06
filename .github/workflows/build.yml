@@ -2,10 +2,10 @@ name: Build & Release
 
 on:
   push:
-    branches: [main]
+    branches: [main, master]
     tags: ["v*"]
   pull_request:
-    branches: [main]
+    branches: [main, master]
   workflow_dispatch:
     inputs:
       platform:
@@ -200,3 +200,4 @@ jobs:
           generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
